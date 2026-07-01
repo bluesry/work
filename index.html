@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>云中鹤·虚拟商品报价 — 金融事业部·数字化精准营销</title>
+<title>云中鹤·虚拟商品内部报价 — 金融事业部·数字化精准营销</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -63,6 +63,9 @@ img{max-width:100%;display:block}
 .cat-chip:hover,.cat-chip.active{background:#FF8C42;color:#fff;border-color:#FF8C42;box-shadow:0 4px 12px rgba(255,140,66,.25)}
 .cat-chip .chip-count{font-size:11px;opacity:.7}
 .toolbar{display:flex;gap:12px;padding:16px 24px;align-items:center;flex-wrap:wrap;max-width:1280px;margin:0 auto 20px}
+.price-notice{max-width:1280px;margin:0 auto 14px;padding:12px 20px;background:linear-gradient(135deg,rgba(255,140,66,.08),rgba(255,193,161,.12));border:1px solid rgba(255,140,66,.18);border-radius:12px;display:flex;align-items:center;gap:10px;font-size:14px;color:#6B3A1F}
+.price-notice .pn-icon{font-size:20px}
+.price-notice .pn-text strong{color:#FF8C42;font-weight:700}
 .search-box{flex:1;min-width:200px;position:relative}
 .search-box input{width:100%;padding:10px 14px 10px 40px;border:1.5px solid rgba(255,140,66,.2);border-radius:12px;font-size:14px;background:#fff;color:#4A2511;transition:all .2s}
 .search-box input:focus{outline:none;border-color:#FF8C42;box-shadow:0 0 0 3px rgba(255,140,66,.1)}
@@ -162,13 +165,13 @@ img{max-width:100%;display:block}
 <nav class="nav">
   <div class="nav-inner">
     <div class="nav-logo">
-      <div class="logo-icon">📊</div>
-      <span>云中鹤·虚拟商品报价</span>
+      <img src="logo.png" alt="云中鹤" style="height:36px;width:auto">
+      <span>云中鹤·虚拟商品内部报价</span>
     </div>
     <div class="nav-links">
       <a href="#products">产品报价</a>
       <a href="#service">交付模式</a>
-      <a href="#contact">联系我们</a>
+      <a href="#contact">详细咨询、疑问解答</a>
       <a href="#faq">常见问题</a>
       <div class="view-toggle">
         <button class="view-btn active" onclick="switchView('card')" id="btnCard">卡片</button>
@@ -180,12 +183,12 @@ img{max-width:100%;display:block}
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-kicker">📋 云中鹤·虚拟商品报价单</div>
+    <div class="hero-kicker">📋 云中鹤·虚拟商品内部报价单</div>
     <h1>全量虚拟权益产品<br><span>一站式报价查询</span></h1>
-    <p>覆盖 16 大品类的虚拟权益产品，支持品类筛选、价格对比与交付方式查询，助力精准营销决策。</p>
+    <p>公司全量16大品类虚拟商品速查，展示价格为"对外最低限价"，所有商品含6%增值税率。</p>
     <div class="hero-actions">
-      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">查看产品报价</button>
-      <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">联系我们</button>
+      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">查看报价清单</button>
+      <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">详细咨询、疑问解答</button>
     </div>
   </div>
 </section>
@@ -204,6 +207,10 @@ img{max-width:100%;display:block}
 </section>
 
 <section id="products">
+  <div class="price-notice">
+    <span class="pn-icon">💰</span>
+    <span class="pn-text"><strong>展示价格为"对外最低限价"</strong>，所有商品已含 <strong>6% 增值税率</strong>，可作为采购预算与对账参考。</span>
+  </div>
   <div class="toolbar">
     <div class="search-box">
       <span class="search-icon">🔍</span>
@@ -252,8 +259,8 @@ img{max-width:100%;display:block}
 
 <section class="contact-section" id="contact">
   <div class="container">
-    <h2>联系我们</h2>
-    <p class="section-sub">产品采购、商务合作，请联系以下负责人</p>
+    <h2>详细咨询、疑问解答</h2>
+    <p class="section-sub">虚拟项目探讨、招投标协助、报价深入咨询，可企微联系或直接电话（24H接待）</p>
     <div class="contact-card">
       <div class="contact-icon">📞</div>
       <div class="contact-dept">金融事业部</div>
@@ -277,11 +284,11 @@ img{max-width:100%;display:block}
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q"><span class="q-icon">Q</span>最低起订量是多少？</div>
-        <div class="faq-a">不同品牌和品类的起订量不同，通常 100 份起订。大批量采购可享受更优价格，具体请联系商务负责人。</div>
+        <div class="faq-a">一般没有起订量的要求，如确认能够达到年度千万级，可与品牌方而且洽谈返点政策。</div>
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q"><span class="q-icon">Q</span>报价有效期多久？如何获取最新报价？</div>
-        <div class="faq-a">本报价单更新于 2026 年 7 月，价格可能随市场波动调整。建议定期关注更新，或联系马文韬获取实时报价。</div>
+        <div class="faq-a">本次为2026年7月报价，综合了各供应商最低价格，一般价格当月有效。最新报价亦可联系供应链或金融事业部项目部提供表格清单。</div>
       </div>
     </div>
   </div>
@@ -291,7 +298,7 @@ img{max-width:100%;display:block}
   <div class="footer-grid">
     <div class="footer-col">
       <h4>品牌</h4>
-      <a href="#">云中鹤·虚拟商品报价</a>
+      <a href="#">云中鹤·虚拟商品内部报价</a>
       <a href="#">数字化精准营销事业部</a>
     </div>
     <div class="footer-col">
